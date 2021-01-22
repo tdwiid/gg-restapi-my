@@ -8,7 +8,7 @@ import (
 )
 
 func Init() *sql.DB {
-	db, err := sql.Open("mysql", "root:root@tcp(127.0.0.1:3306)/sampledb")
+	db, err := sql.Open("mysql", "root:newpass@tcp(127.0.0.1:3306)/sampledb")
 	checkErr(err)
 
 	//defer db.Close()
