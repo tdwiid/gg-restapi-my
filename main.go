@@ -14,7 +14,9 @@ func main() {
 	router.Run(":8077")
 }
 
+// SetupRouter : untuk memanggil properties Gin utk rest-api
 func SetupRouter() *gin.Engine {
+
 	router := gin.Default()
 
 	v1 := router.Group("api/v1")
