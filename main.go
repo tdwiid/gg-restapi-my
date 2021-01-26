@@ -10,14 +10,20 @@ import (
 func main() {
   fmt.Println("hello world")
 
+<<<<<<< Updated upstream
   router := SetupRouter()
   router.Run(":8081")
+=======
+	router := SetupRouter()
+	router.Run(":8081")
+>>>>>>> Stashed changes
 }
 
 
 func SetupRouter() *gin.Engine {
   router := gin.Default()
 
+<<<<<<< Updated upstream
   v1 := router.Group("api/v1")
   {
     v1.POST("/flower", controllers.Create)
@@ -27,4 +33,15 @@ func SetupRouter() *gin.Engine {
     v1.GET("/check", controllers.HealthCheck)
   }
   return router
+=======
+	v1 := router.Group("api/v1")
+	{
+		v1.POST("/flower", controllers.Create)
+		v1.GET("/flower/:id", controllers.GetFlower)
+		v1.GET("/flowers", controllers.GetAllFlower)
+		v1.DELETE("/flower/:id", controllers.DeleteFlower)
+		v1.GET("/check", controllers.HealthCheck)
+	}
+	return router
+>>>>>>> Stashed changes
 }
